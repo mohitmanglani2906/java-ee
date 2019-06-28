@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>abc</servlet-name>
+        <servlet-class>com.mohit.MyServlet</servlet-class>
+        <init-param>
+            <!-- Servletconfig-->
+            <param-name>name</param-name>
+            <param-value>Mohit Manglani</param-value>
+        </init-param>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>abc</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>UploadFile</servlet-name>
+        <servlet-class>com.mohit.UploadFile</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadFile</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+    
+    
+    <context-param>
+        <!--ServletContext-->
+        <param-name>name</param-name>
+        <param-value>Mohit</param-value>
+    </context-param>
+    <context-param>
+        <param-name>Phone</param-name>
+        <param-value>lenovo</param-value>
+    </context-param>
+    
+</web-app>
