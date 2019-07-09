@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The following beans are wrriten for the using purpose of the different spring beans and classes and libraries-->
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xmlns:aop="http://www.springframework.org.schema/aop"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+                         http://www.springframework.org/schema/beans/spring-beans.xsd
+                         http://www.springframework.org/schema/context
+                         http://www.springframework.org/schema/context/spring-context.xsd
+                         http://www.springframework.org/schema/aop   
+                         http://www.springframework.org/schema/aop/spring-aop.xsd">
+    
+    <context:component-scan base-package="com.mohit"></context:component-scan>  <!-- here any class of com.mohit can be used as a bean where bean is a model that is data  -->
+    
+    <bean id="tyre" class="com.mohit.Tyre">
+        <property name="brand" value="Ceat"></property> 
+        <!--<constructor-arg value="MRF"></constructor-arg>-->
+    </bean>     
+     
+    <!-- if you  commented above code bcz then brand property will get null value -->
+    
+    
+    
+    <!--<context:component-scan base-package="com.mohit"></context:component-scan>-->
+    <!--<bean id="vehicle" class="com.mohit.Bike"></bean>-->
+</beans>
+
