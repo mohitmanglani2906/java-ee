@@ -1,0 +1,19 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Fill The Form</title>
+    </head>
+
+    <body>
+        <form action="add" method="post">
+             Number 1  : <input type="text" name="t1"><br/>
+             Number 2  : <input type="text" name="t2"><br/>
+                <input type="submit" value="submit">
+        </form>
+       
+    </body>
+</html>

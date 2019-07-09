@@ -1,0 +1,29 @@
+IN EJB there were not pojos
+pojo  included in spring
+ejb  difficult to manage nd heavy as they use entity
+integrated hibernate and struts in spring boot
+
+
+configuration in spring is tough
+we have to add jar files
+
+spring boot not replacement for spring 
+it is to help us for configuration
+it will give us dependancies
+production ready app.
+runnable no need to do all configuration
+
+we need server in spring 
+h/w -->  OS --> Tomcat  --> war  file 
+boot provides tomcat inside jar file that is embeded jar file
+h/w -->  OS -->app
+
+
+
+boot ---->> started web
+starter jdbc
+spring boot auto configuration
+boot not generates xml file
+
+application.properties replaces xml file
+In which we can change 

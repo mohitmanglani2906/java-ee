@@ -1,0 +1,33 @@
+Dependancies Injection
+
+design pattern in any project 
+like dependancies injection 
+
+why to use it?
+we build project with object
+objects are dependant on other objects
+
+like ram screen hard disk in laptop
+
+class Laptop
+{
+	HardDrive d1 = new Hitachi(); // Normal case
+
+	@Autowired
+	HardDrive d1;
+}
+
+@Component
+class Hitachi implements HardDrive
+{
+	..............
+}
+
+
+
+advantage:
+test it better as it loosely coupled maintain it
+mock object can created to check or to test the one class without affecting other class(Database Class)
+
+
+

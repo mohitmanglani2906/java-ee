@@ -1,0 +1,13 @@
+Hey Friends we are going learn spring boot security
+
+consider the case below one user is creating account in facebook
+Here we store our passwords and email id for log in into facebook
+But these passwords and emails are stored in facebook server and any of facebook admin or DBA can see our info.
+
+Here Spring boot security comes into the picture that it says that I will give security to your passwords and I will encrypt those
+passwords
+
+Spring boot provides us Oauth2 , ldap , SHA 256 and Bcrypt libraries
+
+We will use it
+Thank you!!!
