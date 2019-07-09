@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <head>
+        <title>Welcome</title>
+        <style>
+            *
+            {
+                margin:0;
+                padding:0;
+            }
+            .header
+            {
+               width:98.7vw;
+               background-color:white;
+               height: 10vh;
+               box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+            }
+            #number
+            {
+                float:right;
+                display: block;
+                padding: 8px 16px;
+                margin:10px;
+                line-height: 1em;
+                background-color: #f1f1f1;
+                font-family: sans-serif;
+            }
+            #number:hover
+            {
+                background-color: #ccc;
+                color:black;
+                font-weight: bold;
+            }
+            #view
+            {
+                float:right;
+                display: block;
+                padding: 8px 16px;
+                margin:10px;
+                line-height: 1em;
+                background-color: #f1f1f1;
+                font-family: sans-serif;
+            }
+             #view:hover
+            {
+                background-color: #ccc;
+                color:black;
+                font-weight: bold;
+            }
+            a{
+                color:black;
+                text-decoration: none;
+            }
+            
+            .middle{
+                width:98.7vw;
+                background-color:coral;
+                height: auto;
+            }
+            .updatebutton
+            {
+               margin-top: 20px;
+               width:100px;
+               height:50px;
+               background-color: black;
+               color:white;
+               border:none;
+               font-family: sans-serif;
+               font-size: 20px;
+               text-align: center;
+               box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+            }
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <div class="header"> 
+            <ul>
+                <li id="number"><a>#{user.mobile}</a></li>
+                <li id="view"><a href="view.xhtml">View all user Information</a></li>
+            </ul>
+         </div>    
+            <div class="middle">
+                 <h:form>
+                     <center><h:commandButton value="Update" action="#{login.updateData()}" class="updatebutton"></h:commandButton></center><br/>
+                     
+                     <center><h:commandButton value="Delete" action="#{login.deleteData(login.mobile)}"  class="updatebutton"></h:commandButton></center><br/>
+                     <center><h:commandButton value="Log Out" action="index.xhtml" class="updatebutton"></h:commandButton></center><br/>
+                 </h:form>
+            </div>   
+           
+       
+    </body>
+</html>

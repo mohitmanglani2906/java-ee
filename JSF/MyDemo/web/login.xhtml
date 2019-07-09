@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <head>
+        <title>Log in</title>
+        <style>
+            .formlogin
+            {
+                background-color: #f1f1f1;
+                width:50vh;
+                height:auto;
+                padding: 10px;
+            }
+            .inputtext
+            {
+                padding: 8px 16px;
+                
+            }
+            .outputlabel
+            {
+                padding: 8px 16px;
+            }
+          
+          
+        </style>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <h:body>
+        <center><h1 style="letter-spacing: 5px;">Log in</h1></center><br/>
+        
+        <center> <h:form class="formlogin">
+                <h:outputLabel class="outputlabel">Mobile no</h:outputLabel>
+                <h:inputText value="#{login.mobile}" class="inputtext"></h:inputText><br/><br/>
+                
+                <h:outputLabel class="outputlabel">Password</h:outputLabel>
+                <h:inputSecret value="#{login.password}" class="inputtext"></h:inputSecret><br/><br/>
+                
+                <h:commandButton value="Log in" class="inputtext"  action="#{login.checkCredentials()}" style="background-color:black;color:white;border:none;"></h:commandButton>
+            </h:form></center>
+    </h:body>
+</html>

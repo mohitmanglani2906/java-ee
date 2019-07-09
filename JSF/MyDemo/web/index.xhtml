@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Sign Up</title>
+        <style>
+            .formdemo{
+                background-color: #f1f1f1;
+                width:50vw;
+                height:auto;
+                padding: 10px;
+            }
+            .outputlabel
+            {
+                padding: 10px;
+                margin: 10px;
+                
+            }
+            .inputtext
+            {
+                margin: 10px;
+                margin-left: 20px;
+                
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <center><h1 style="letter-spacing: 5px;">Sign Up</h1></center>
+        <hr/>
+        
+        <center><h:form class="formdemo">
+            
+            <h:outputLabel class="outputlabel">Name</h:outputLabel>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <h:inputText id="name" value="#{user.name}" class="inputtext"></h:inputText> <br/>
+            
+            <h:outputLabel class="outputlabel">Mobile No</h:outputLabel>
+            <h:inputText id="mobile" value="#{user.mobile}" class="inputtext"></h:inputText><br/>
+            
+            <h:outputLabel class="outputlabel">Email id</h:outputLabel>&nbsp;&nbsp;
+            <h:inputText id="email" value="#{user.email}" class="inputtext"></h:inputText><br/>
+            
+            <h:outputLabel class="outputlabel">Password</h:outputLabel>&nbsp;
+            <h:inputSecret id="password" value="#{user.password}" class="inputtext"></h:inputSecret><br/>
+            
+            <h:outputLabel class="outputlabel">Address</h:outputLabel>&nbsp;&nbsp;&nbsp;
+            <h:inputTextarea id="address" value="#{user.address}" class="inputtext"></h:inputTextarea><br/>
+            
+            <h:outputLabel class="outputlabel">Gender</h:outputLabel>
+            <h:selectOneRadio class="inputtext" value="#{user.gender}">
+                <f:selectItem itemValue="M" itemLabel="Male"></f:selectItem>
+                <f:selectItem itemValue="F" itemLabel="Female"></f:selectItem>
+            </h:selectOneRadio>
+            
+            <center><h:commandButton action="#{user.save()}" value="Submit" style="width:100px;
+                                     height:25px;background-color: #ccc;border:none;text-align: center;font-family: verdana;font-weight:bold; "></h:commandButton></center>
+            </h:form></center><br/>
+             <center>Already have an account?<a href="response.xhtml" id="login">  Login</a></center>
+       
+    </h:body>
+</html>
+

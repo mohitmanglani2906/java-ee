@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+     
+    <head>
+        <title>Welcome</title>
+        <style>
+           *
+            {
+                padding:0;
+                margin:0;
+            }
+            .header
+            {
+                width:98.7vw;
+                height:10vh;
+                background-color:coral; 
+            }
+            ul
+            {
+                padding:10px;
+                
+            }
+            li{
+                float:right;
+                display:block;
+                background-color:#ccc;
+                padding: 10px;
+                margin-left: 10px;
+            }
+            li:hover
+            {
+                background-color: #f1f1f1;
+            }
+             .middle{
+                width:98.7vw;
+                background-color:#f1f1f1;
+                height: auto;
+            }
+            .updatebutton
+            {
+               margin-top: 20px;
+               width:100px;
+               height:50px;
+               background-color: black;
+               color:white;
+               border:none;
+               font-family: sans-serif;
+               font-size: 20px;
+               text-align: center;
+               box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+            }
+            a{
+                text-decoration: none;
+                color:black;
+            }
+            </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+       
+       
+           
+<!--        <c:if test="${fn:contains(header.cookie,'persist=')}"> 
+            
+        </c:if>
+        -->
+        
+        
+        <div class="header">
+            <ul>
+                <li>#{cookie['uname'].value}</li>
+                <li><a href="display.xhtml?faces-redirect=true">View All User</a></li>
+            </ul>
+            
+        </div>
+        
+        <div class="middle">
+                 <h:form>
+                     <center><h:commandButton value="Update" action="update.xhtml?faces-redirect=true" class="updatebutton"></h:commandButton></center><br/>
+                     <center><h:commandButton value="Delete" action ="delete.jsp?faces-redirect=true" class="updatebutton"></h:commandButton></center><br/>
+                     <center><h:commandButton value="Log Out" action="index.xhtml" class="updatebutton"></h:commandButton></center><br/>
+                 </h:form>
+            
+        </div>
+        
+    </body>
+</html>

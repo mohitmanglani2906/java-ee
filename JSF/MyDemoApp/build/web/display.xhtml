@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html    xmlns="http://www.w3.org/1999/xhtml"
+         xmlns:h="http://java.sun.com/jsf/html"
+         xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>All Users</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <h:body>
+        <center><h1>All Users</h1></center>
+        <center><h:dataTable value="#{userinfo.getUsers()}" var="use" border="2" style="padding:10px;border-collapse: collapse;">
+            <h:column>
+                <f:facet name="header">Name</f:facet>
+                <h:outputText value="#{use.name}"></h:outputText>
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header">Email</f:facet>
+                <h:outputText value="#{use.email}"></h:outputText>
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header">Gender</f:facet>
+                <h:outputText value="#{use.gender}"></h:outputText>
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header">Address</f:facet>
+                <h:outputText value="#{use.address}"></h:outputText>
+            </h:column>
+            
+            </h:dataTable></center>
+    </h:body>
+</html>

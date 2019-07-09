@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form id="user_info">
+              <h:outputLabel for="l1">
+                <h:outputText value="Enter name : "></h:outputText>
+              </h:outputLabel>
+            <h:inputText value="Enter Here : " id="l1" autocomplete="off" readonly="off" required="true" requiredMessage="Please enter something : "></h:inputText>
+             <br/><br/>
+             
+              <h:outputLabel for="l2">
+                <h:outputText value="Enter Password : "></h:outputText>
+             </h:outputLabel>
+             <h:inputSecret value="Enter here: " id="l2" required="true" requiredMessage="Please Enter Password :"></h:inputSecret>
+             <br/><br/>
+             
+             <h:outputLabel for="t1">
+                 <h:outputText value="Enter Address : "></h:outputText>
+             </h:outputLabel>
+             <h:inputTextarea value="Enter Address Here : " id="t1" required="true" requiredMessage="Pleasee Enter Address "></h:inputTextarea>
+             <br/><br/>
+             
+             <h:commandLink id="image-link-id" action="any .xhtml file">
+                 <h:outputText value="Click Here : "></h:outputText>
+             </h:commandLink>
+             
+             <br/><br/>   
+             
+             <h:inputHidden value="Hello" id="hi" ></h:inputHidden>
+             
+             <br/><br/>
+             
+             <h:graphicImage id="image-id" name="user-image" url="E:\java\JSF\JsfTag\build\web\audi.jpg"   
+                        height="50px" width="50px" alt="Image not found"></h:graphicImage>  
+             
+             <br/><br/>
+             <h:commandButton value="Submit" id="btn1" action="add"></h:commandButton>
+        </h:form>
+        
+      
+    </h:body>
+</html>
+

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+     <h:head>
+        <title>Update </title>
+        <style>
+             .formdemo{
+                background-color: #f1f1f1;
+                width:50vw;
+                height:auto;
+                padding: 10px;
+            }
+            .outputlabel
+            {
+                padding: 10px;
+                margin: 10px;
+                
+            }
+            .inputtext
+            {
+                margin: 10px;
+                margin-left: 20px;
+                
+            }
+        </style>
+            
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    
+    <h:body>
+        <center><h1 style="letter-spacing: 5px;">Update!!!</h1></center>
+        <hr/>
+        <center><h1>Hello #{cookie['uname'].value}</h1></center>
+        <center><h:form class="formdemo">
+            
+            <h:outputLabel class="outputlabel">Name</h:outputLabel>&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+            <h:inputText id="name" value="#{update.name}" class="inputtext"></h:inputText> <br/>
+            
+            <h:outputLabel class="outputlabel">Mobile No</h:outputLabel>
+            <h:inputText id="mobile" value="#{update.mobile}" class="inputtext"></h:inputText><br/>
+            
+            <h:outputLabel class="outputlabel">Email id</h:outputLabel>&#160;&#160;
+            <h:inputText id="email" value="#{update.email}" class="inputtext"></h:inputText><br/>
+            
+            <h:outputLabel class="outputlabel">Password</h:outputLabel>&#160;
+            <h:inputSecret id="password" value="#{update.password}" class="inputtext"></h:inputSecret><br/>
+            
+            <h:outputLabel class="outputlabel">Address</h:outputLabel>&#160;&#160;&#160;
+            <h:inputTextarea id="address" value="#{update.address}" class="inputtext"></h:inputTextarea><br/>
+            
+            <h:outputLabel class="outputlabel">Gender</h:outputLabel>
+            <h:selectOneRadio class="inputtext" value="#{update.gender}">
+                <f:selectItem itemValue="M" itemLabel="Male"></f:selectItem>
+                <f:selectItem itemValue="F" itemLabel="Female"></f:selectItem>
+            </h:selectOneRadio>
+            
+            <center><h:commandButton action="#{update.updateTable(cookie['uname'].value)}" value="Submit" style="width:100px;
+                                     height:25px;background-color: #ccc;border:none;text-align: center;font-family: verdana;font-weight:bold;"></h:commandButton></center>
+            </h:form></center>
+    </h:body>
+    
+</html>
